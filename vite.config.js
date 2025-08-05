@@ -5,11 +5,11 @@ import { fileURLToPath } from 'url';
 import nunjucks from 'vite-plugin-nunjucks'
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
-const srcFolder = "src";
-const distFolder = "publicDir/chat";
+const srcFolder = "src/V1";
+const distFolder = "publicDir/WA";
 
-import sidebarItems from "./src/sidebar-items.json";
-import horizontalMenuItems from "./src/horizontal-menu-items.json";
+import sidebarItems from "./src/V1/sidebar-items.json";
+import horizontalMenuItems from "./src/V1/horizontal-menu-items.json";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -42,53 +42,7 @@ const getVariables = (mode) => {
         }
     })
     return variables
-}
-
-// Modules and extensions
-// If the value is true, then it will copy the files inside the `dist` folders
-// But if the value is false, it will copy the entire module files and folders
-const modulesToCopy = {
-    "@icon/dripicons": false, // With dist folder = false
-    "@fortawesome/fontawesome-free": false,
-    "rater-js": false,
-    "bootstrap-icons": false,
-    apexcharts: true,
-    "perfect-scrollbar": true,
-    flatpickr: true,
-    filepond: true,
-    "filepond-plugin-file-validate-size": true,
-    "filepond-plugin-file-validate-type": true,
-    "filepond-plugin-image-crop": true,
-    "filepond-plugin-image-exif-orientation": true,
-    "filepond-plugin-image-filter": true,
-    "filepond-plugin-image-preview": true,
-    "filepond-plugin-image-resize": true,
-    "feather-icons": true,
-    dragula: true,
-    dayjs: false,
-    "chart.js": true,
-    "choices.js": false,
-    parsleyjs: true,
-    sweetalert2: true,
-    summernote: true,
-    jquery: true,
-    quill: true,
-    tinymce: false,
-    "toastify-js": false,
-    "datatables.net": false,
-    "datatables.net-bs5": false,
-    "simple-datatables": true,
-    jsvectormap: true,
-}
-
-const copyModules = Object.keys(modulesToCopy).map(moduleName => {
-    const withDist = modulesToCopy[moduleName]
-    return {
-        src: normalizePath(resolve(__dirname, `./node_modules/${moduleName}${withDist ? `/${distFolder}` : ''}`)),
-        dest: 'assets/extensions',
-        rename: moduleName
-    }
-})
+};
 
 build({
     configFile: false,
@@ -120,8 +74,7 @@ export default defineConfig((env) => ({
             targets: [
                 { src: normalizePath(resolve(__dirname, `./${srcFolder}/assets/static`)), dest: 'assets' },
                 { src: normalizePath(resolve(__dirname, `./${distFolder}/assets/compiled/fonts`)), dest: 'assets/compiled/css' },
-                { src: normalizePath(resolve(__dirname, "./node_modules/bootstrap-icons/bootstrap-icons.svg")), dest: 'assets/static/images' },
-                ...copyModules
+                { src: normalizePath(resolve(__dirname, "./node_modules/bootstrap-icons/bootstrap-icons.svg")), dest: 'assets/static/images' }
             ],
             watch: {
                 reloadPageOnChange: true
