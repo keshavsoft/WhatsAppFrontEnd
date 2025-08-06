@@ -1,6 +1,6 @@
 {
   "name": "frontendbyvite",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "use vite for builiding frontend html and bundling js and css",
   "main": "vite.config.js",
   "type": "module",
