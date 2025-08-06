@@ -38,9 +38,18 @@ let jFLocalToInputMobileNumberId = (inValue) => {
     };
 };
 
+const wAProfile1 = ({ inData, inWs }) => {
+    if (inData === undefined) {
+        location.href = jVarCommonSuccessUrl;
+    };
+};
+
 const wAProfile = ({ inData, inWs }) => {
     if (inData === undefined) {
         location.href = jVarCommonSuccessUrl;
+    } else {
+        jFLocalToInputUserNameId(inData.pushname);
+        jFLocalToInputMobileNumberId(inData.me.user);
     };
 };
 
