@@ -1,13 +1,12 @@
 {
   "name": "frontendbyvite",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "use vite for builiding frontend html and bundling js and css",
   "main": "vite.config.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vite build",
-    "WA": "vite build --config vite.config-WA.js"
+    "build": "vite build"
   },
   "author": "",
   "license": "ISC",

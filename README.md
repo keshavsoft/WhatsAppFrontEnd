@@ -12,3 +12,7 @@ integrated mazer with vite for WhatsAppFrontEnd to be used in WhatsAppV4 backend
 ### 0.1.3
 
 - V5 started message fail time covered
+
+### 0.1.4
+
+- sendmessage.html ui changes
