@@ -6,31 +6,31 @@
   {
     "name": "Dashboard",
     "url": "index.html",
-    "icon": "grid-fill"
+    "icon": "bi bi-speedometer2"
   },
   {
     "name": "Profile",
     "url": "./account-profile.html",
-    "icon": "grid-fill"
+    "icon": "bi bi-person-circle"
   },
   {
     "name": "sendMessage",
     "url": "./sendMessage.html",
-    "icon": "grid-fill"
+    "icon": "bi bi-send"
   },
   {
     "name": "Import",
     "url": "./import-Excel.html",
-    "icon": "grid-fill"
+    "icon": "bi bi-arrow-up-right-circle"
   },
   {
     "name": "ReadAllChats",
     "url": "javascript:webSocket.send(`WAReadAllChats`)",
-    "icon": "grid-fill"
+    "icon": "bi bi-book"
   },
   {
     "name": "Sign Out",
     "url": "javascript:webSocket.send(`StopWA`)",
-    "icon": "grid-fill"
+    "icon": "bi bi-box-arrow-right"
   }
 ]
