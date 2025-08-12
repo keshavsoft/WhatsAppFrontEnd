@@ -5,11 +5,11 @@ import { fileURLToPath } from 'url';
 import nunjucks from 'vite-plugin-nunjucks'
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
-const srcFolder = "src/V5";
+const srcFolder = "src/V6";
 const distFolder = "publicDir/WA";
 
-import sidebarItems from "./src/V5/sidebar-items.json";
-import horizontalMenuItems from "./src/V5/horizontal-menu-items.json";
+import sidebarItems from "./src/V6/sidebar-items.json";
+import horizontalMenuItems from "./src/V6/horizontal-menu-items.json";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

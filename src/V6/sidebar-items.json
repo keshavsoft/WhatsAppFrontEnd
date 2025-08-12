@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Menu",
+    "isTitle": true
+  },
+  {
+    "name": "Parent",
+    "url": "index.html",
+    "icon": "bi bi-box-arrow-up-left"
+  },
+  {
+    "name": "Dashboard",
+    "url": "index.html",
+    "icon": "bi bi-speedometer2"
+  },
+  {
+    "name": "Profile",
+    "url": "./account-profile.html",
+    "icon": "bi bi-person-lines-fill"
+  },
+  {
+    "name": "sendMessage",
+    "url": "./sendMessage.html",
+    "icon": "bi bi-envelope-arrow-up"
+  },
+  {
+    "name": "Import",
+    "url": "./import-Excel.html",
+    "icon": "bi bi-arrow-bar-down"
+  },
+  {
+    "name": "ReadAllChats",
+    "url": "javascript:webSocket.send(`WAReadAllChats`)",
+    "icon": "bi bi-book-half"
+  },
+  {
+    "name": "Sign Out",
+    "url": "javascript:webSocket.send(`StopWA`)",
+    "icon": "bi bi-box-arrow-left"
+  }
+]

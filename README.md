@@ -16,3 +16,7 @@ integrated mazer with vite for WhatsAppFrontEnd to be used in WhatsAppV4 backend
 ### 0.1.4
 
 - sendmessage.html ui changes
+
+### 0.1.5
+
+- scanqr gif added
